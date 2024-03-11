@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practices</title>
+</head>
+<body>
+    <style>
+        #array
+        {
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        #disp
+        {
+            position:fixed;
+            left: 20%;
+            top: 10%;
+            display: inline-block;
+            font-size: 130%;
+            padding: 10px;
+            ;
+        }
+    #disp>*{
+        padding: 10px;
+    }
+    </style>
+    <div id="array">
+        <p>Enter the index</p>
+        <input type="Number" id="index">
+        <p>Enter the number</p>
+        <input type="text" id="ip">
+        <button onclick="sd()">Add</button>
+    </div>
+    <div id="disp">
+        
+    </div>
+    <script>
+        var a=[];
+        var index=document.getElementById("index");
+        var element=document.getElementById("ip");
+        function sd()
+        { 
+        a[index.value] = ip.value;
+        console.log(a);
+
+        const dis = document.createElement("h5");
+        dis.textContent = ip.value;
+        const disp = document.getElementById("disp");
+        disp.appendChild(dis); 
+        document.getElementById("disp").style.border="2px solid black"
+
+}
+function ops()
+{
+    const b=[1,3,5,6,8,9,2,0];
+    const c=b.map(num=>(num*num))
+    console.log(b)
+    console.log(b[2])
+    console.log(b.sort())
+    const d=b.splice(1,2)
+    console.log(d)
+    const names = [
+    {"Fname": "raj", "Lname": "kumar"},
+    {"Fname": "prasath", "LastName": "kumar"}
+];
+
+const fullNameArray = names.map(person => {
+    if (person.LastName) {
+        return `${person.Fname} ${person.LastName}`;
+    } else {
+        return `${person.Fname} ${person.Lname}`;
+    }
+});
+
+console.log(fullNameArray);
+}
+ops()
+    </script>
+</body>
+</html>
+
